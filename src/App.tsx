@@ -7,7 +7,13 @@ import image3 from './images/image3.jpg';
 import logoImage from './images/Logo.jpg';
 import checkImage from './icons/check.png';
 import basketImage from './icons/basket.png';
+import mujerDeportista from './images/Mujer Deportista.jpg'
+import hombreDeportista from './images/Hombre Deportista.jpg'
+import niñosDeportistas from './images/Niños Deportistas.jpg'
+import accesoriosDeportivos from './images/Accesorios Deportivos.jpg'
+import descuentos from './images/Descuentos.jpg'
 
+import ImageButton from './Button';
 
 function App() {
   const images = [image1, image2, image3];
@@ -43,15 +49,26 @@ function App() {
         <div className="basket-button">
           <img src={basketImage} alt="basket" />
         </div>
-
       </div>
+
       <div className="image-container">
         <div className="image">
           <img src={images[currentImage]} alt="Imagen" />
         </div>
       </div>
+
+      <div className="buttons-container">
+        {/* Agrega los 5 botones con texto personalizado */}
+        <ImageButton onClick={() => console.log('Botón 1 clickeado')} imageSrc={mujerDeportista} buttonText="Mujer Deportista" />
+        <ImageButton onClick={() => console.log('Botón 2 clickeado')} imageSrc={hombreDeportista} buttonText="Hombre Deportista" />
+        <ImageButton onClick={() => console.log('Botón 3 clickeado')} imageSrc={niñosDeportistas} buttonText="Niños Deportistas" />
+        <ImageButton onClick={() => console.log('Botón 4 clickeado')} imageSrc={accesoriosDeportivos} buttonText="Accesorios Deportivos" />
+        <ImageButton onClick={() => console.log('Botón 5 clickeado')} imageSrc={descuentos} buttonText="Descuentos" />
+      </div>
+
     </div>
   );
 }
 
 export default App;
+

@@ -1,0 +1,20 @@
+/* Button.css */
+.styled-button {
+    padding: 5px;
+    margin: 3px;
+    background: transparent;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .button-image {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px; /* Ajusta según sea necesario para reducir el espacio */
+  }
+  
+  .styled-button:hover {
+    background-color: rgba(130, 0, 140, 0.2);
+    border-color: rgba(130, 0, 140, 0.5);
+  }
