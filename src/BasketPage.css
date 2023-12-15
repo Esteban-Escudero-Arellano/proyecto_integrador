@@ -1,0 +1,12 @@
+/* BasketPage.css */
+.basket-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; /* Fondo blanco o el color que prefieras */
+    color: #000000; /* Color de texto negro o el color que prefieras */
+  }
+  

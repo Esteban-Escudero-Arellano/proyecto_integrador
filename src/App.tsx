@@ -1,5 +1,8 @@
+// App.tsx
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
+import BasketPage from './BasketPage';
 
 import image1 from './images/image1.jpg';
 import image2 from './images/image2.jpg';
@@ -7,15 +10,15 @@ import image3 from './images/image3.jpg';
 import logoImage from './images/Logo.jpg';
 import checkImage from './icons/check.png';
 import basketImage from './icons/basket.png';
-import mujerDeportista from './images/Mujer Deportista.jpg'
-import hombreDeportista from './images/Hombre Deportista.jpg'
-import niñosDeportistas from './images/Niños Deportistas.jpg'
-import accesoriosDeportivos from './images/Accesorios Deportivos.jpg'
-import descuentos from './images/Descuentos.jpg'
+import mujerDeportista from './images/Mujer Deportista.jpg';
+import hombreDeportista from './images/Hombre Deportista.jpg';
+import niñosDeportistas from './images/Niños Deportistas.jpg';
+import accesoriosDeportivos from './images/Accesorios Deportivos.jpg';
+import descuentos from './images/Descuentos.jpg';
 
 import ImageButton from './Button';
 
-function App() {
+function Home() {
   const images = [image1, image2, image3];
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -46,9 +49,9 @@ function App() {
         <div className="login-button">
           <img src={checkImage} alt="check" />
         </div>
-        <div className="basket-button">
+        <Link to="/basket" className="basket-button">
           <img src={basketImage} alt="basket" />
-        </div>
+        </Link>
       </div>
 
       <div className="image-container">
@@ -58,17 +61,25 @@ function App() {
       </div>
 
       <div className="buttons-container">
-        {/* Agrega los 5 botones con texto personalizado */}
         <ImageButton onClick={() => console.log('Botón 1 clickeado')} imageSrc={mujerDeportista} buttonText="Mujer Deportista" />
         <ImageButton onClick={() => console.log('Botón 2 clickeado')} imageSrc={hombreDeportista} buttonText="Hombre Deportista" />
         <ImageButton onClick={() => console.log('Botón 3 clickeado')} imageSrc={niñosDeportistas} buttonText="Niños Deportistas" />
         <ImageButton onClick={() => console.log('Botón 4 clickeado')} imageSrc={accesoriosDeportivos} buttonText="Accesorios Deportivos" />
         <ImageButton onClick={() => console.log('Botón 5 clickeado')} imageSrc={descuentos} buttonText="Descuentos" />
       </div>
-
     </div>
   );
 }
 
-export default App;
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/basket" element={<BasketPage />} />
+      </Routes>
+    </Router>
+  );
+}
 
+export default App;
