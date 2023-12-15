@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import BasketPage from './BasketPage';
+import LoginPage from './LoginPage';
 
 import image1 from './images/image1.jpg';
 import image2 from './images/image2.jpg';
@@ -47,11 +48,15 @@ function Home() {
           </div>
         </div>
         <div className="login-button">
-          <img src={checkImage} alt="check" />
+          <Link to="/login">
+            <img src={checkImage} alt="check" />
+          </Link>
         </div>
-        <Link to="/basket" className="basket-button">
-          <img src={basketImage} alt="basket" />
-        </Link>
+        <div className="basket-button">
+          <Link to="/basket">
+            <img src={basketImage} alt="basket" />
+          </Link>
+        </div>
       </div>
 
       <div className="image-container">
@@ -77,6 +82,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/basket" element={<BasketPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </Router>
   );

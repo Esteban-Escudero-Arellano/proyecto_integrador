@@ -1,12 +1,34 @@
 /* BasketPage.css */
 .basket-page {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff; /* Fondo blanco o el color que prefieras */
-    color: #000000; /* Color de texto negro o el color que prefieras */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.basket-image {
+  width: 100%;
+  max-width: 600px; /* Ajusta según sea necesario */
+  height: auto;
+}
+
+.footer {
+  margin-top: 20px;
+}
