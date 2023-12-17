@@ -4,6 +4,11 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import BasketPage from './BasketPage';
 import LoginPage from './LoginPage';
+import MujerDeportistaPage from './MujerDeportistaPage'; 
+import HombreDeportistaPage from './HombreDeportistaPage'; 
+import NiñosDeportistasPage from './NiñosDeportistasPage'; 
+import AccesoriosDeportivosPage from './AccesoriosDeportivos';
+import DescuentosPage from './DescuentosPage';
 
 import image1 from './images/image1.jpg';
 import image2 from './images/image2.jpg';
@@ -66,11 +71,25 @@ function Home() {
       </div>
 
       <div className="buttons-container">
-        <ImageButton onClick={() => console.log('Botón 1 clickeado')} imageSrc={mujerDeportista} buttonText="Mujer Deportista" />
-        <ImageButton onClick={() => console.log('Botón 2 clickeado')} imageSrc={hombreDeportista} buttonText="Hombre Deportista" />
-        <ImageButton onClick={() => console.log('Botón 3 clickeado')} imageSrc={niñosDeportistas} buttonText="Niños Deportistas" />
-        <ImageButton onClick={() => console.log('Botón 4 clickeado')} imageSrc={accesoriosDeportivos} buttonText="Accesorios Deportivos" />
-        <ImageButton onClick={() => console.log('Botón 5 clickeado')} imageSrc={descuentos} buttonText="Descuentos" />
+        <Link to="/mujer-deportista" className="custom-link">
+          <ImageButton onClick={() => console.log('Botón 1 clickeado')} imageSrc={mujerDeportista} buttonText="Mujer Deportista" />
+        </Link>
+        
+        <Link to="/hombre-deportista" className="custom-link">
+          <ImageButton onClick={() => console.log('Botón 2 clickeado')} imageSrc={hombreDeportista} buttonText="Hombre Deportista" />
+        </Link>
+
+        <Link to="/niños-deportistas" className="custom-link">
+          <ImageButton onClick={() => console.log('Botón 3 clickeado')} imageSrc={niñosDeportistas} buttonText="Niños Deportistas" />
+        </Link>
+
+        <Link to="/accesorios-deportivos" className="custom-link">
+          <ImageButton onClick={() => console.log('Botón 4 clickeado')} imageSrc={accesoriosDeportivos} buttonText="Accesorios Deportivos" />
+        </Link>
+
+        <Link to="/descuentos" className="custom-link">
+          <ImageButton onClick={() => console.log('Botón 5 clickeado')} imageSrc={descuentos} buttonText="Descuentos" />
+        </Link>          
       </div>
     </div>
   );
@@ -83,6 +102,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/basket" element={<BasketPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/mujer-deportista" element={<MujerDeportistaPage />} />
+        <Route path="/hombre-deportista" element={<HombreDeportistaPage />} />
+        <Route path="/niños-deportistas" element={<NiñosDeportistasPage />} />
+        <Route path="/accesorios-deportivos" element={<AccesoriosDeportivosPage />} />
+        <Route path="/descuentos" element={<DescuentosPage />} />
       </Routes>
     </Router>
   );

@@ -1,16 +1,16 @@
-// Button.tsx
+// ImageButton.tsx
 import React from 'react';
 
 interface ButtonProps {
   onClick: () => void;
   imageSrc?: string;
-  buttonText?: string; // Agregamos una nueva prop para el texto del botón
+  buttonText?: string;
 }
 
 const ImageButton: React.FC<ButtonProps> = ({ onClick, imageSrc, buttonText }) => {
   const handleClick = () => {
     onClick();
-    alert(`¡${buttonText} clickeado!`); // Mostrar un mensaje de alerta con el texto del botón
+    // No hay alerta aquí, así que no se mostrará ningún mensaje
   };
 
   return (
