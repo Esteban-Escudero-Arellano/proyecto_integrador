@@ -8,6 +8,7 @@ const NiñosDeportistasPage: React.FC = () => {
   const navigate = useNavigate();
 
   const products = [
+    { id: 41, imageSrc: 'https://contents.mediadecathlon.com/p2075956/k$84492436f32989f82afd91028dc81182/patines-ninos-play3-rosado-violeta.jpg?format=auto&quality=40&f=800x800', price: '$25.000', title: 'Patines en línea infantil rosado/violeta play3' },
     { id: 41, imageSrc: '', price: '$', title: '' },
     { id: 42, imageSrc: '', price: '$', title: '' },
     { id: 43, imageSrc: '', price: '$', title: '' },
