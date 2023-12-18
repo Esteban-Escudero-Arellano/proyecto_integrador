@@ -4,24 +4,13 @@
 }
 
 .logo {
-  max-width: 1000px; /* ajusta el ancho según tus necesidades */
-  margin-bottom: 20px;
+  max-width: 200px; /* Establece el ancho máximo de tu logo según sea necesario */
 }
 
 .product-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
-}
-
-.product {
-  cursor: pointer;
-}
-
-.product img {
-  width: 100%;
-  height: auto;
-  border: 1px solid #ccc;
 }
 
 .back-button {

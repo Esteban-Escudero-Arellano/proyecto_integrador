@@ -1,8 +1,21 @@
 .hombre-deportista-page {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .hombre-deportista-page h2 {
-    color: #333;
-  }
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  max-width: 200px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.back-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}

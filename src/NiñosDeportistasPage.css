@@ -3,6 +3,19 @@
     padding: 20px;
   }
   
-  .niños-deportistas-page h2 {
-    color: #333;
+  .logo {
+    max-width: 200px;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
+  
+  .back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
   }
