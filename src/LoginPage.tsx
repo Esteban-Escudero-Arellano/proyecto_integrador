@@ -24,8 +24,14 @@ const LoginPage: React.FC = () => {
 
         <div className="input-container">
           <input type="email" placeholder="Correo Electrónico" />
+          <input type="password" placeholder="Contraseña" /> {/* Nuevo campo de contraseña */}
           <button className="next-button">Siguiente</button>
         </div>
+
+        <p>
+          ¿No tienes una cuenta?{' '}
+          <Link to="/registro">Regístrate aquí</Link> {/* Enlace para registrarse */}
+        </p>
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import HombreDeportistaPage from './HombreDeportistaPage';
 import NiñosDeportistasPage from './NiñosDeportistasPage'; 
 import AccesoriosDeportivosPage from './AccesoriosDeportivos';
 import DescuentosPage from './DescuentosPage';
+import RegistroPage from './RegistroPage';
 
 import image1 from './images/image1.jpg';
 import image2 from './images/image2.jpg';
@@ -102,6 +103,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/basket" element={<BasketPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/registro" element={<RegistroPage />} /> {/* Nueva ruta para la página de registro */}
         <Route path="/mujer-deportista" element={<MujerDeportistaPage />} />
         <Route path="/hombre-deportista" element={<HombreDeportistaPage />} />
         <Route path="/niños-deportistas" element={<NiñosDeportistasPage />} />

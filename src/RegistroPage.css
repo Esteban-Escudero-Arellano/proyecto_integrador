@@ -1,0 +1,37 @@
+/* RegistroPage.css */
+
+.registro-page {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* Estilos para el botón de registro */
+  .input-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo específico para el botón de registro */
+  .register-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .register-button:hover {
+    background-color: #45a049;
+  }
+  
+  .register-button:active {
+    background-color: #3e8e41;
+  }
+  
+  
