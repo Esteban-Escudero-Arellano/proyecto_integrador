@@ -54,6 +54,10 @@ const HombreDeportistaPage: React.FC = () => {
   
       console.log(`Producto ${productId} agregado al carrito`);
     };
+
+    const handleGoToCart = () => {
+      navigate('/basket');
+    };
   
     return (
       <div className="hombre-deportista-page">
@@ -73,6 +77,10 @@ const HombreDeportistaPage: React.FC = () => {
         <button onClick={handleGoBack} className="back-button">
           Volver
         </button>
+
+        <button onClick={handleGoToCart} className="carr-button">
+        Carro
+    </button>
       </div>
     );
   };

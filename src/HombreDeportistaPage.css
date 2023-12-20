@@ -19,3 +19,20 @@
   font-size: 16px;
   cursor: pointer;
 }
+
+.carr-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: green; 
+  color: white; 
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.carr-button:hover {
+  background-color: darkgreen;
+}

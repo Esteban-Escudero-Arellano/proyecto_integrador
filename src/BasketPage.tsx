@@ -1,17 +1,23 @@
-// BasketPage.tsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from './images/Logo.jpg';
 import CarritoVacio from './images/Carrito Vacio.jpg';
 import './BasketPage.css';
 
-const BasketPage: React.FC = () => {
-  // Estado local para almacenar los productos en el carrito
-  const [productosEnCarrito, setProductosEnCarrito] = useState<string[]>([]);
 
-  // Función para agregar un producto al carrito
+type BasketPageState = {
+  productosEnCarrito: string[];
+};
+
+const BasketPage: React.FC = () => {
+  const [state, setState] = useState<BasketPageState>({
+    productosEnCarrito: [],
+  });
+
   const agregarProductoAlCarrito = (producto: string) => {
-    setProductosEnCarrito((prevProductos) => [...prevProductos, producto]);
+    setState((prevState) => ({
+      productosEnCarrito: [...prevState.productosEnCarrito, producto],
+    }));
   };
 
   return (
@@ -23,13 +29,13 @@ const BasketPage: React.FC = () => {
       </div>
 
       <div className="content">
-        {productosEnCarrito.length === 0 ? (
+        {state.productosEnCarrito.length === 0 ? (
           <img src={CarritoVacio} alt="Basket" className="basket-image" />
         ) : (
           <div>
             <h2>Productos en el carrito:</h2>
             <ul>
-              {productosEnCarrito.map((producto, index) => (
+              {state.productosEnCarrito.map((producto, index) => (
                 <li key={index}>{producto}</li>
               ))}
             </ul>

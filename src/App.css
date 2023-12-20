@@ -79,13 +79,13 @@ body {
 
 .buttons-container {
   display: flex;
-  justify-content: space-between; /* Opcional: para espaciar los botones de manera uniforme */
+  justify-content: space-between;
 }
 
 .styled-button {
   cursor: pointer;
   border: 1px solid #ccc;
   padding: 0px;
-  margin: 10px; /* Ajusta el espacio entre los botones cambiando este valor */
+  margin: 10px; 
 }
 

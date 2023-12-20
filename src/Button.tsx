@@ -1,4 +1,3 @@
-// ImageButton.tsx
 import React from 'react';
 
 interface ButtonProps {

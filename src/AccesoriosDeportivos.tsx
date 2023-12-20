@@ -54,6 +54,10 @@ const handleAddToCart = (productId: number) => {
   console.log(`Producto ${productId} agregado al carrito`);
 };
 
+const handleGoToCart = () => {
+  navigate('/basket');
+};
+
 return (
   <div className="accesorios-deportivos-page">
     <img src={logo} alt="Logo" className="logo" />
@@ -71,6 +75,10 @@ return (
     </div>
     <button onClick={handleGoBack} className="back-button">
       Volver
+    </button>
+
+    <button onClick={handleGoToCart} className="carr-button">
+        Carro
     </button>
   </div>
 );
