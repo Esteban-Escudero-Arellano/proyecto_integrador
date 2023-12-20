@@ -1,24 +1,29 @@
+// Product.tsx
 import React from 'react';
-import './Product.css';
 
-interface ProductProps {
+export interface ProductProps {
   imageSrc: string;
   price?: string;
   title?: string;
-  onAddToCart: () => void; // Agrega una nueva propiedad para el clic del botón "Agregar al carrito"
+  stock?: number;
+  onAddToCart: () => void;
 }
 
-const Product: React.FC<ProductProps> = ({ imageSrc, price, title, onAddToCart }) => {
+const Product: React.FC<ProductProps> = ({ imageSrc, price, title, stock, onAddToCart }) => {
   return (
     <div className="product">
-      <img src={imageSrc} alt="Product" className="product-image" />
+      <img src={imageSrc} alt="Product" className="product-image" style={{ maxWidth: '100%', height: 'auto' }} />
       <div className="product-details">
         {title && <p className="product-title">{title}</p>}
         {price && <p className="product-price">{price}</p>}
-        <button onClick={onAddToCart}>Agregar al Carrito</button>
+        {stock !== undefined && <p className="product-stock">Stock: {stock}</p>}
+        <button onClick={onAddToCart} disabled={stock !== undefined && stock === 0}>
+          {stock !== undefined && stock === 0 ? 'Sin stock' : 'Agregar al Carrito'}
+        </button>
       </div>
     </div>
   );
 };
+
 
 export default Product;
